@@ -1,13 +1,46 @@
 <!doctype html>
-<html>
+<html lang="pt-br">
+
 <head>
+  <meta name="description" content="Consumindo API Covid19 com Fetch">
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../dist/output.css" rel="stylesheet">
+  <link href="../src/css/style.css" rel="stylesheet">
+  <link rel="shortcut icon" href="../src/img/icon-covid.ico" type="image/x-icon">
+  <title> Estatísticas Covid19</title>
 </head>
-<body class="bg-red-500">
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+
+<body>
+
+  <main>
+    <section class="bg-no-repeat bg-center bg-cover bg-fixed"
+      style="background-image: url('./img/bg-capa.webp'); height: 100vh">
+      <div class="w-full mx-auto px-4 h-full flex items-center justify-center bg-black-600 backdrop-brightness-50">
+        <div>
+          <div class="text-center">
+            <h1 class="text-white text-4xl mb-1 font-semibold">Estatísticas mais recentes da COVID 19</h1>
+          </div>
+
+          <div class="mt-7">
+            <select id="countries"
+              class="bg-grey-50 w-full space-y-3 px-3 py-2 border border-gray-300 rounded text-gray-500 outline-none">
+              <option value="">Selecione o País</option>
+            </select>
+            <div class="text-center bg-white mx-auto rounded">
+              <p id="covidNewConfirmed"></p>
+              <p id="covidTotalConfirmed"></p>
+              <p id="covidNewDeaths"></p>
+              <p id="covidTotalDeaths"></p>
+              <p id="covidLastUpdate"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../src/js/main.js" type="module"></script>
 </body>
+
 </html>

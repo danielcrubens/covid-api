@@ -1,5 +1,5 @@
-/* import { apiKey } from "./config.js"; */
-
+import { apiKey } from "./config.js";
+const apiKey = process.env.apiKey;
 let covid19data;
 
 const init = async () => {
@@ -42,7 +42,7 @@ async function getLatestCOVID19Data() {
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "covid-193.p.rapidapi.com",
-            "x-rapidapi-key": process.env.API_KEY
+            "x-rapidapi-key": apiKey
         }
     })
         .then(response => response.json())

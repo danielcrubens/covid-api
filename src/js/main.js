@@ -1,6 +1,7 @@
-import { apiKey } from "./config.js";
-const apiKey = process.env.apiKey;
+/* import { apiKey } from "./config.js";
+ */
 let covid19data;
+const apiKey = process.env.API_KEY;
 
 const init = async () => {
     await Covid();
